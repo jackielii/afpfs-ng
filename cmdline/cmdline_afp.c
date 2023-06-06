@@ -24,7 +24,7 @@
 static char curdir[AFP_MAX_PATH];
 static struct afp_url url;
 
-int full_url=0;
+int full_url_=0;
 
 #define DEFAULT_DIRECTORY "/"
 
@@ -1145,7 +1145,7 @@ static void * cmdline_server_startup(int recursive)
 	struct stat stbuf;
 	int ret;
 
-	full_url=1;
+	full_url_=1;
 
 	if (server_subconnect()) goto error;
 
